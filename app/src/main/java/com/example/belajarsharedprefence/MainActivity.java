@@ -10,6 +10,15 @@ public class MainActivity extends AppCompatActivity {
 
     UserModel userModel;
     SaveShared saveShared;
+    Button      set;
+    
+      set.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent a = new Intent(MainActivity.this,SettingAcount.class);
+                startActivity(a);
+            }
+        });
 
 
     @Override
@@ -18,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         saveShared = new SaveShared(this);
+        set = findViewById(R.id.set);
 
     }
 
